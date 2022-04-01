@@ -1,12 +1,31 @@
 .cabecalho{
-    background: aquamarine;
+    background: linear-gradient(90deg,rgb(97, 1, 253), rgb(65, 0, 0));
     padding: 10px 0;
 }
 .titulo-principal{
     font-size: 25px;
-    color: #252525;
+    color: #ffffff;
     font-family: arial;
     font-style: italic;
     text-align: center;
     font-weight: bold;
+}
+.secao-principal{
+    background: #37c7eb;
+}
+.conteudo{
+    width: 600px;
+    padding: 50px 0;
+    display: inline-block;
+}
+.opcao-de-jogada{
+
+    border:2.3px solid white;
+    width: 160px;
+    margin: 10px 0 10px 20px;
+    padding: 15px;
+    align-items: center;
+}
+.opcao-de-jogada img{
+    align-items: center;
 }
