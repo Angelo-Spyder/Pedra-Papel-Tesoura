@@ -1,0 +1,12 @@
+.cabecalho{
+    background: aquamarine;
+    padding: 10px 0;
+}
+.titulo-principal{
+    font-size: 25px;
+    color: #252525;
+    font-family: arial;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
