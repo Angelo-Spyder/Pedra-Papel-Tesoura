@@ -19,13 +19,21 @@
     display: inline-block;
 }
 .opcao-de-jogada{
-
     border:2.3px solid white;
     width: 160px;
+    height: 130px;
     margin: 10px 0 10px 20px;
     padding: 15px;
     align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.opcao-de-jogada:hover{
+    border:2.3px solid red;
+    padding: 18px;
 }
 .opcao-de-jogada img{
+    width: 90%;
+    height: 100%;
     align-items: center;
 }
