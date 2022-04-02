@@ -42,6 +42,10 @@
     display: inline-block;
     width: 20%; 
     height: 550px;
+    font-size: 35px;
+    color: #ffffff;
+    font-family: arial;
+    font-weight: bold;
 }
 .jogada-player{
     display: inline-block;
@@ -56,6 +60,10 @@
     display: inline-block;
     width: 20%; 
     height: 550px;
+    font-size: 35px;
+    color: #ffffff;
+    font-family: arial;
+    font-weight: bold;
 }
 .jogada-ia{
     display: inline-block;
