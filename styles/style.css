@@ -14,7 +14,7 @@
     background: #37c7eb;
 }
 .conteudo{
-    width: 50%;
+    width: 30%;
     padding: 50px 0;
     display: inline-block;
 }
@@ -37,10 +37,24 @@
     height: 100%;
     align-items: center;
 }
+.conteudo-player{
+    vertical-align: top;
+    display: inline-block;
+    width: 20%; 
+    height: 550px;
+}
+.jogada-player{
+    display: inline-block;
+    margin-top: 50%;
+    font-size: 25px;
+    color: #ffffff;
+    font-family: arial;
+    font-weight: bold;
+}
 .conteudo-ia{
     vertical-align: top;
     display: inline-block;
-    width: 40%; 
+    width: 20%; 
     height: 550px;
 }
 .jogada-ia{
