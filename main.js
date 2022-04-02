@@ -23,6 +23,7 @@ function jogadaAleatoria(){
     `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`]
 
     var aleatoria = Math.floor(Math.random() * 3) 
-    
+
+    jogadaIA.classList.add("opcao-de-jogada")
     jogadaIA.innerHTML = opcoes[aleatoria];
 }
