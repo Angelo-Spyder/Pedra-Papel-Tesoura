@@ -3,17 +3,27 @@ var pedra = document.querySelector("#pedra");
 var papel = document.querySelector("#papel");
 var tesoura = document.querySelector("#tesoura");
 
+var JogadaP = document.querySelector(".jogada-player")
 var jogadaIA = document.querySelector(".jogada-ia");
 
-pedra.addEventListener("click", function(){  
+pedra.addEventListener("click", function(){ 
+    JogadaP.innerHTML = "" 
+    JogadaP.innerHTML = `<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`
+    JogadaP.classList.add("opcao-de-jogada")
     jogadaAleatoria()
 })
 
 papel.addEventListener("click", function(){  
+    JogadaP.innerHTML = "" 
+    JogadaP.innerHTML = `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`
+    JogadaP.classList.add("opcao-de-jogada")
     jogadaAleatoria()
 })
 
 tesoura.addEventListener("click", function(){  
+    JogadaP.innerHTML = "" 
+    JogadaP.innerHTML = `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`
+    JogadaP.classList.add("opcao-de-jogada")
     jogadaAleatoria()
 })
 
