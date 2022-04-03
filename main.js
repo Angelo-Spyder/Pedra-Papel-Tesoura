@@ -27,6 +27,11 @@ papel.addEventListener("click", function(){
     JogadaP.innerHTML = `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`
     JogadaP.classList.add("opcao-de-jogada")
     jogadaAleatoria()
+    if(jogadaIA.innerHTML == `<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`){
+        placarP.textContent = Number(placarP.textContent) + 1
+    }else if(jogadaIA.innerHTML == `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`){
+        placarIA.textContent = Number(placarIA.textContent) + 1
+    }
 })
 
 tesoura.addEventListener("click", function(){  
