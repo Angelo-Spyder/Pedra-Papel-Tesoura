@@ -5,26 +5,27 @@ var papel = document.querySelector("#papel");
 var tesoura = document.querySelector("#tesoura");
 
 //Colocando imagens no html
-var JogadaP = document.querySelector(".jogada-player")
+var JogadaP = document.querySelector(".jogada-player");
 var jogadaIA = document.querySelector(".jogada-ia");
 
 //Pegando dados do placar
-var placarP = document.querySelector(".placar-player")
-var placarIA = document.querySelector(".placar-ia")
+var placarP = document.querySelector(".placar-player");
+var placarIA = document.querySelector(".placar-ia");
+
+//Jogadas
+var jogadaIATesoura = `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`;
+var jogadaIAPedra = `<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`;
+var jogadaIAPapel = `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`
 
 //Jogada pedra
 pedra.addEventListener("click", function(){ 
-    JogadaP.innerHTML = "" 
-    JogadaP.innerHTML = `<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`
-    JogadaP.classList.add("opcao-de-jogada")
+    JogadaP.innerHTML = "" ;
+    JogadaP.innerHTML = jogadaIAPedra;
+    JogadaP.classList.add("opcao-de-jogada");
 
-    jogadaAleatoria()
-    if(jogadaIA.innerHTML == `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`){
-        placarP.textContent = Number(placarP.textContent) + 1
-    }else if(jogadaIA.innerHTML == `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`){
-        placarIA.textContent = Number(placarIA.textContent) + 1
-    }
-})
+    jogadaAleatoria();
+    validandoJogadaPedra();
+});
 
 
 //Jogada papel
@@ -52,6 +53,14 @@ tesoura.addEventListener("click", function(){
         placarIA.textContent = Number(placarIA.textContent) + 1
     }
 })
+
+function validandoJogadaPedra(){ 
+    if(jogadaIA.innerHTML == jogadaIATesoura){
+        placarP.textContent = Number(placarP.textContent) + 1
+    }else if(jogadaIA.innerHTML == jogadaIAPapel){
+        placarIA.textContent = Number(placarIA.textContent) + 1
+    };
+}
 
 //Aleatoriedade da jogada ia
 function jogadaAleatoria(){
