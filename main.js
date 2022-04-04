@@ -1,14 +1,18 @@
 
+//Pegando jogada do usuário
 var pedra = document.querySelector("#pedra");
 var papel = document.querySelector("#papel");
 var tesoura = document.querySelector("#tesoura");
 
+//Colocando imagens no html
 var JogadaP = document.querySelector(".jogada-player")
 var jogadaIA = document.querySelector(".jogada-ia");
 
+//Pegando dados do placar
 var placarP = document.querySelector(".placar-player")
 var placarIA = document.querySelector(".placar-ia")
 
+//Jogada pedra
 pedra.addEventListener("click", function(){ 
     JogadaP.innerHTML = "" 
     JogadaP.innerHTML = `<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`
@@ -22,6 +26,8 @@ pedra.addEventListener("click", function(){
     }
 })
 
+
+//Jogada papel
 papel.addEventListener("click", function(){  
     JogadaP.innerHTML = "" 
     JogadaP.innerHTML = `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`
@@ -34,6 +40,7 @@ papel.addEventListener("click", function(){
     }
 })
 
+//jogada tesoura
 tesoura.addEventListener("click", function(){  
     JogadaP.innerHTML = "" 
     JogadaP.innerHTML = `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`
@@ -46,6 +53,7 @@ tesoura.addEventListener("click", function(){
     }
 })
 
+//Aleatoriedade da jogada ia
 function jogadaAleatoria(){
     var opcoes = [`<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`,
     `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`,
