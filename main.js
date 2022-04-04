@@ -41,14 +41,11 @@ papel.addEventListener("click", function(){
 //jogada tesoura
 tesoura.addEventListener("click", function(){  
     JogadaP.innerHTML = "" 
-    JogadaP.innerHTML = `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`
+    JogadaP.innerHTML = jogadaIATesoura
     JogadaP.classList.add("opcao-de-jogada")
     jogadaAleatoria()
-    if(jogadaIA.innerHTML == `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`){
-        placarP.textContent = Number(placarP.textContent) + 1
-    }else if(jogadaIA.innerHTML == `<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`){
-        placarIA.textContent = Number(placarIA.textContent) + 1
-    }
+    validandoJogadaTesoura()
+
 })
 
 function validandoJogadaPedra(){ 
@@ -63,6 +60,14 @@ function validandoJogadaPapel(){
     if(jogadaIA.innerHTML ==jogadaIAPedra){
         placarP.textContent = Number(placarP.textContent) + 1
     }else if(jogadaIA.innerHTML == jogadaIATesoura){
+        placarIA.textContent = Number(placarIA.textContent) + 1
+    }
+}
+
+function validandoJogadaTesoura(){
+    if(jogadaIA.innerHTML == jogadaIAPapel){
+        placarP.textContent = Number(placarP.textContent) + 1
+    }else if(jogadaIA.innerHTML == jogadaIAPedra){
         placarIA.textContent = Number(placarIA.textContent) + 1
     }
 }
