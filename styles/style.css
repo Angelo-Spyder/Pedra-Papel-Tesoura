@@ -1,42 +1,54 @@
+
+body{
+    font-family: arial;
+}
+/* Cabeçalho Estilo*/
 .cabecalho{
-    background: linear-gradient(90deg,rgb(97, 1, 253), rgb(65, 0, 0));
-    padding: 10px 0;
+    background: #200e2b;
+    padding: 15px 0;
 }
 .titulo-principal{
-    font-size: 25px;
-    color: #ffffff;
-    font-family: arial;
-    font-style: italic;
-    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
     font-weight: bold;
+    text-align: center;
 }
+
+/* conteudo body*/
 .secao-principal{
-    background: #37c7eb;
+    background: #37598b;
 }
 .conteudo{
-    width: 30%;
-    padding: 50px 0;
-    display: inline-block;
-}
+    margin: 0 auto;
+    width: 940px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}   
+
+/* Pedra, Papel e Tesoura */
 .opcao-de-jogada{
-    border:2.3px solid white;
+    border:2px solid rgba(255, 255, 255, 0.753);
     width: 160px;
     height: 130px;
-    margin: 10px 0 10px 20px;
     padding: 15px;
-    align-items: center;
     cursor: pointer;
     transition: 0.2s;
+    border-radius: 10px;
 }
 .opcao-de-jogada:hover{
-    border:2.3px solid red;
-    padding: 18px;
+    border-radius: 100%;
+    border:2.3px solid rgb(0, 217, 255);
+    background: rgb(0, 217, 255);
 }
 .opcao-de-jogada img{
     width: 90%;
     height: 100%;
     align-items: center;
 }
+
+/* conteudo jogada*/
 .conteudo-player{
     vertical-align: top;
     display: inline-block;
@@ -44,15 +56,14 @@
     height: 550px;
     font-size: 35px;
     color: #ffffff;
-    font-family: arial;
     font-weight: bold;
 }
+
 .jogada-player{
     display: inline-block;
     margin-top: 50%;
     font-size: 25px;
     color: #ffffff;
-    font-family: arial;
     font-weight: bold;
 }
 .conteudo-ia{
@@ -62,7 +73,6 @@
     height: 550px;
     font-size: 35px;
     color: #ffffff;
-    font-family: arial;
     font-weight: bold;
 }
 .jogada-ia{
@@ -70,6 +80,5 @@
     margin-top: 50%;
     font-size: 25px;
     color: #ffffff;
-    font-family: arial;
     font-weight: bold;
 }
