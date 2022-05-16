@@ -14,7 +14,7 @@
     <header class="cabecalho">
         <h1 class="titulo-principal">Pedra Papel Tesoura</h1>
     </header>
-    <section class="secao-principal">
+    <section>
         <main class="conteudo">        
             <div class="opcao-de-jogada" id="pedra">
                 <img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">
@@ -26,21 +26,22 @@
                 <img src="images/tesoura.png" alt="Mão-sinal-de-tesoura">
             </div>
         </main>
-        <main class="placar">
-            <p class="placar-player">0</p>
-            <p class="placar-ia">0</p>
-        </main>
-        <main class="conteudo-player">
-            
-            <div class="jogada-player">
-                <p>...</p>
+
+        <main class="conteudo-jogadas">
+
+            <div class="placar">
+                <p class="placar-player">0 <span>:Jogador</span></p>
+                <p class="placar-ia">0 <span>:ia</span></p>
             </div>
-        </main>
-        <main class="conteudo-ia">
-            
-            <div class="jogada-ia">
-                <p>Faça sua jogada...</p>
-            </div>
+          <div class="jogada">
+                <div class="jogada-player">
+                    Faça sua jogada...
+                </div>
+                VS
+                <div class="jogada-ia">
+                    Aguardando sua jogada...
+                </div>
+          </div>
         </main>
     </section>
 
