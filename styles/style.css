@@ -20,7 +20,6 @@ body{
 
 .conteudo{
     margin: 0 auto;
-    width: 940px;
     padding: 10px;
     display: flex;
     justify-content: space-around;
@@ -64,4 +63,15 @@ body{
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+@media screen and (max-width: 676px){
+    .opcao-de-jogada{
+        width: 90px;
+        height: 60px;
+    }
+    .conteudo-jogadas{
+        width: 100%;
+        font-size: 25px;
+    }
 }
