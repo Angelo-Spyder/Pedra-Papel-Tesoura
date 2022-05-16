@@ -9,75 +9,39 @@ var JogadaP = document.querySelector(".jogada-player");
 var jogadaIA = document.querySelector(".jogada-ia");
 
 //Pegando dados do placar
-var placarP = document.querySelector(".placar-player");
-var placarIA = document.querySelector(".placar-ia");
+var placarP = document.querySelector("#placar-player");
+var placarIA = document.querySelector("#placar-ia");
 
 //Jogadas
-var jogadaIATesoura = `<img class="pedra" src="images/tesoura.png" alt="Mão-sinal-de-tesoura">`;
-var jogadaIAPedra = `<img class="pedra" src="images/pedra.png" alt="Mão-sinal-de-pedra">`;
-var jogadaIAPapel = `<img class="pedra" src="images/papel.png" alt="Mão-sinal-de-papel">`
 
-//Jogada pedra
-pedra.addEventListener("click", function(){ 
-    JogadaP.innerHTML = "" ;
-    JogadaP.innerHTML = jogadaIAPedra;
-    JogadaP.classList.add("opcao-de-jogada");
+var jogadas = [
+    {
+        src: `images/tesoura.png`
+    },
+    {
+        src: `images/pedra.png`
+    },
+    {
+        src: `images/papel.png`
+    }
+]
 
-    jogadaAleatoria();
-    validandoJogadaPedra();
-});
-
-
-//Jogada papel
-papel.addEventListener("click", function(){  
-    JogadaP.innerHTML = "" 
-    JogadaP.innerHTML = jogadaIAPapel
-    JogadaP.classList.add("opcao-de-jogada")
-    jogadaAleatoria()
-    validandoJogadaPapel()
-
+pedra.addEventListener("click", function(){
+    JogadaP.textContent = ""
+    JogadaP.appendChild(criarJogada(jogadas[1].src))
+    jogadaIA.innerHTML = ""
+    criarJogadaIa()
 })
 
-//jogada tesoura
-tesoura.addEventListener("click", function(){  
-    JogadaP.innerHTML = "" 
-    JogadaP.innerHTML = jogadaIATesoura
-    JogadaP.classList.add("opcao-de-jogada")
-    jogadaAleatoria()
-    validandoJogadaTesoura()
+function criarJogada(jogada){
+    var img = document.createElement("img")
+    img.src = jogada
+    img.classList.add("opcao-de-jogada")
 
-})
-
-function validandoJogadaPedra(){ 
-    if(jogadaIA.innerHTML == jogadaIATesoura){
-        placarP.textContent = Number(placarP.textContent) + 1
-    }else if(jogadaIA.innerHTML == jogadaIAPapel){
-        placarIA.textContent = Number(placarIA.textContent) + 1
-    };
+    return img
 }
 
-function validandoJogadaPapel(){
-    if(jogadaIA.innerHTML ==jogadaIAPedra){
-        placarP.textContent = Number(placarP.textContent) + 1
-    }else if(jogadaIA.innerHTML == jogadaIATesoura){
-        placarIA.textContent = Number(placarIA.textContent) + 1
-    }
-}
-
-function validandoJogadaTesoura(){
-    if(jogadaIA.innerHTML == jogadaIAPapel){
-        placarP.textContent = Number(placarP.textContent) + 1
-    }else if(jogadaIA.innerHTML == jogadaIAPedra){
-        placarIA.textContent = Number(placarIA.textContent) + 1
-    }
-}
-
-//Aleatoriedade da jogada ia
-function jogadaAleatoria(){
-    var opcoes = [jogadaIAPedra, jogadaIAPapel ,jogadaIATesoura]
-
-    var aleatoria = Math.floor(Math.random() * 3) 
-
-    jogadaIA.classList.add("opcao-de-jogada")
-    jogadaIA.innerHTML = opcoes[aleatoria];
+function criarJogadaIa(){
+    var aleatoria = Math.floor( Math.random() * 3)
+    jogadaIA.appendChild(criarJogada(jogadas[aleatoria].src))
 }
