@@ -1,7 +1,7 @@
 <h1>Jogo do pedra papel e tesoura</h1>
 
 <h2>O que é</h2>
-<p>O próprio título explica, mas, e feito para web sendo mais fácil de visualizar por um computador no mobile ainda não há design.</p>
+<p>O próprio título explica, mas, e feito para web sendo mais fácil de visualizar por um computador no mobile agora é possível visualizar</p>
 <p>A aplicação é muito simples, tendo as três opções e uma ia que joga de forma aleatória, podendo repitir a mesma jogada mais de duas vezes.</p>
 
 <h2>Acesso e tecnologias</h2>
